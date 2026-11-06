@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iphone DEV 1</title>
+<style>
+body {
+background-color: #030849;
+color: #570808;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+margin: 0;
+padding: 20px;
+}
+
+/* Colour tokens — override to re-skin the effect:
+   --ink    main text colour (defaults to currentColor)
+   --ink-2  primary accent   --ink-3  secondary accent */
+:root { --ink: currentColor; --ink-2: #FF4FD8; --ink-3: #4FF8FF; }
+
+/* 20 Phosphor — CRT terminal: green glow, rolling scanlines, tube flicker */
+.fx-crt {
+  position: relative;
+  font: 600 26px/1.2 "JetBrains Mono", monospace;
+  letter-spacing: .1em;
+  padding: .3em .5em;
+  color: #4dff88;
+  text-shadow: 0 0 7px rgba(77, 255, 136, .8);
+  background: rgba(20, 60, 35, .18);
+  border-radius: 4px;
+  animation: fx-crt-flicker 3.4s steps(1) infinite;
+}
+.fx-crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg,
+      transparent 0 2px,
+      rgba(0, 0, 0, .38) 2px 4px);
+  animation: fx-crt-roll 6s linear infinite;
+}
+@keyframes fx-crt-flicker {
+  0%, 6%, 100% { opacity: 1; }
+  3%   { opacity: .82; }
+  4.5% { opacity: .95; transform: translateY(1px); }
+  70%  { opacity: .9; }
+  71%  { opacity: 1; transform: none; }
+}
+@keyframes fx-crt-roll {
+  to { background-position: 0 48px; }
+}
+
+
+/* LOGO */
+.logo {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.logo h1 {
+    display: inline-block;
+    margin: 0;
+
+    font-family: "Courier New", monospace;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    color: #00ff66;
+
+    /* Leuchteffekt */
+    text-shadow:
+        0 0 5px #00ff66,
+        0 0 10px #00ff66,
+        0 0 20px #00ff66;
+
+    /* leichter Pixel-/Tech-Look */
+    transform: scaleY(1.05);
+}
+</style>
+</head>
+<body>
+    <div style="text-align: center;">
+      <div class="logo">
+    <h1>Iphone Dev</h1>
+</div>
+        <div class="fx-crt">Iphone Dev</div>
+
+        <div style="text-align: center;"><h3>Ihre Hilfe und infoseite zum Thema ios <h3></div>
+          <hr>
+          <hr>
+          <hr>
+         <div>*************************</div> <div>interesante links</div>
+         <div>*</div>
+    <a href="https://yoshifan.me/zydia">Zydia </a>
+    <div>*</div>
+    <a href="https://jaibreakme.com">JailbreakMe </a>
+    <div>*</div>
+    <a href="https://tlsroot.litten.ca">TLSROOT </a><div>*</div>
+    <a href="https://cydiafree.com">CydiaFree (schlechter fake Webklip) </a>
+    <div>*</div>
+         <div>**************************</div> 
+         <a href="spass-ioshist.html">History of all Iphone moddels</a>
+</body>
